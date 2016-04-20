@@ -1,7 +1,8 @@
 import React from 'react';
+import SiteBar from './SiteBar';
 
 export default () => (
   <div>
-    <h1>Chore Track</h1>
+    <SiteBar />
   </div>
 );
