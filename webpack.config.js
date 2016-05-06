@@ -16,6 +16,8 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  devtool: 'eval-source-map',
+
   devServer: {
     contentBase: PATHS.build,
     historyApiFallback: true,
@@ -44,6 +46,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loaders: ['babel?cacheDirectory'],
+        include: PATHS.app
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css'],
         include: PATHS.app
       }
     ]
